@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="card flex justify-content-center">
+    <div class="p-4 mb-3" id="Rating1"></div>
+    <app-voting-detail></app-voting-detail>
+    <div class="p-4 mb-3" id="Rating1">
+      <h2 class="flex justify-content-center mb-3">
+        Wie war deine Arbeitswoche?
+      </h2>
+      <p-rating
+        class="flex justify-content-center"
+        [stars]="6"
+        (onRate)="onChangeRating($event.value)"
+      >
+        <ng-template pTemplate="onicon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+        <ng-template pTemplate="officon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+      </p-rating>
+    </div>
+    <div class="p-4 mb-3" id="Rating2">
+      <h2 class="flex justify-content-center mb-3">
+        Wie war deine Arbeitsbelastung diese Woche?
+      </h2>
+      <p-rating
+        class="flex justify-content-center"
+        [stars]="6"
+        (onRate)="onChangeRating($event.value)"
+      >
+        <ng-template pTemplate="onicon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+        <ng-template pTemplate="officon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+      </p-rating>
+    </div>
+    <div class="p-4 mb-3" id="Rating3">
+      <h2 class="flex justify-content-center mb-3">
+        Wie war die Stimmung im Team?
+      </h2>
+      <p-rating
+        class="flex justify-content-center"
+        [stars]="6"
+        (onRate)="onChangeRating($event.value)"
+      >
+        <ng-template pTemplate="onicon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+        <ng-template pTemplate="officon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+      </p-rating>
+    </div>
+    <div class="p-4 mb-3" id="Rating4">
+      <h2 class="flex justify-content-center mb-3">
+        Wie war die Zusammenarbeit mit anderen Teams?
+      </h2>
+      <p-rating
+        class="flex justify-content-center"
+        [stars]="6"
+        (onRate)="onChangeRating($event.value)"
+      >
+        <ng-template pTemplate="onicon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+        <ng-template pTemplate="officon">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png"
+            [width]="30"
+            [height]="30"
+          />
+        </ng-template>
+      </p-rating>
+    </div>
+    <div class="p-4 mb-3" id="Rating4">
+      <h2 class="flex justify-content-center mb-3">
+        Hier kannst die ein Kommentar hinterlassen?
+      </h2>
+      <div class="card flex justify-content-center">
+        <textarea
+          rows="5"
+          cols="30"
+          pInputTextarea
+          [(ngModel)]="comment"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</div>

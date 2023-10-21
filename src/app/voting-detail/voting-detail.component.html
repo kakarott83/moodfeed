@@ -1,0 +1,76 @@
+<div>{{ selectedMood }}</div>
+<div class="flex flex-row-reverse flex-wrap justify-content-evenly voting">
+  <!--Very Good-->
+  <p-button
+    icon="fa-sharp fa-solid fa-face-laugh-beam fa-2xl"
+    [rounded]="true"
+    [text]="true"
+    [style]="{
+      color:
+        selectedMood === 'veryGood' ? 'var(--green-800)' : 'var(--surface-300)'
+    }"
+    (onClick)="onClick('veryGood')"
+  ></p-button>
+  <!--Good-->
+  <p-button
+    icon="fa-solid fa-face-smile fa-2xl"
+    [rounded]="true"
+    [text]="true"
+    [style]="{
+      color: selectedMood == 'good' ? 'var(--green-400)' : 'var(--surface-300)'
+    }"
+    (onClick)="onClick('good')"
+  ></p-button>
+  <!--Normal-->
+  <p-button
+    icon="fa-solid fa-face-meh fa-2xl"
+    [rounded]="true"
+    [text]="true"
+    [style]="{
+      color:
+        selectedMood == 'normal' ? 'var(--yellow-700)' : 'var(--surface-300)'
+    }"
+    (onClick)="onClick('normal')"
+  ></p-button>
+  <!--Not Good-->
+  <p-button
+    icon="fa-solid fa-face-frown-open fa-2xl"
+    [rounded]="true"
+    [text]="true"
+    [style]="{
+      color:
+        selectedMood == 'notGood' ? 'var(--yellow-500)' : 'var(--surface-300)'
+    }"
+    (onClick)="onClick('notGood')"
+  ></p-button>
+  <!--Bad-->
+  <p-button
+    icon="fa-solid fa-face-frown fa-2xl"
+    [rounded]="true"
+    [text]="true"
+    [style]="{
+      color: selectedMood == 'bad' ? 'var(--orange-500)' : 'var(--surface-300)'
+    }"
+    (onClick)="onClick('bad')"
+  ></p-button>
+  <!--Very Bad-->
+  <p-button
+    icon="fa-solid fa-face-angry fa-2xl"
+    [rounded]="true"
+    [text]="true"
+    [style]="{
+      color: selectedMood == 'veryBad' ? 'var(--red-700)' : 'var(--surface-300)'
+    }"
+    (onClick)="onClick('veryBad')"
+  ></p-button>
+</div>
+<div *ngFor="let btn of buttons">
+  <p-button
+    [icon]="btn.icon"
+    [rounded]="true"
+    [text]="true"
+    [id]="btn.event"
+    class="btnStyle1"
+    (onClick)="onClick(btn)"
+  ></p-button>
+</div>

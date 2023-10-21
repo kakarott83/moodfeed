@@ -1,0 +1,41 @@
+<!--Menu-->
+<p-menubar>
+  <ng-template pTemplate="start">
+    <img
+      src="https://primefaces.org/cdn/primeng/images/primeng.svg"
+      height="40"
+      class="mr-2"
+    />
+    <i
+      class="pi pi-bars m-3 cursor-pointer"
+      style="font-size: 1.5rem"
+      (click)="sidebarVisibleLeft = true"
+    ></i>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div>
+      <i
+        class="pi pi-user m-3 cursor-pointer"
+        style="font-size: 1.5rem"
+        (click)="logout()"
+      ></i>
+      <i
+        class="pi pi-sign-out m-3 cursor-pointer"
+        style="font-size: 1.5rem"
+        (click)="logout()"
+      ></i>
+    </div>
+  </ng-template>
+</p-menubar>
+<!--Sidebar-->
+<div class="card flex justify-content-center">
+  <p-sidebar [(visible)]="sidebarVisibleLeft">
+    <ng-template pTemplate="header">Menü</ng-template>
+    <ng-template pTemplate="content">
+      <p-menu [model]="contentItems"> </p-menu>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <p-menu [model]="footerItems"> </p-menu>
+    </ng-template>
+  </p-sidebar>
+</div>

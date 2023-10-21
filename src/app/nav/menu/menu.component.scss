@@ -1,0 +1,35 @@
+:host ::ng-deep {
+  .p-sidebar-header {
+    justify-content: space-between !important;
+  }
+
+  .p-sidebar-content {
+    padding: 0px;
+    .p-element {
+      display: flex;
+      justify-content: flex-start;
+      text-decoration: none;
+    }
+  }
+
+  .p-sidebar-footer {
+    padding: 0px;
+    .p-element {
+      display: flex;
+      justify-content: flex-start;
+      text-decoration: none;
+    }
+  }
+
+  .p-menu {
+    border: none;
+    width: 100%;
+  }
+
+  .p-menu-list {
+    padding: 0px;
+    :hover {
+      background-color: aqua;
+    }
+  }
+}
